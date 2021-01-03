@@ -1,21 +1,56 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, Image, Button, ImageBackground, View } from 'react-native';
+import ProfilephotoButton from './components/ProfilephotoButton';
+import ProfilephotoUsername from './components/ProfilephotoUsername';
+import ProfilephotoTime from './components/ProfilephotoTime';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ImageBackground
+        style={styles.image}
+        source={{uri:"https://picsum.photos/seed/picsum/200/300"}}>
+          <ProfilephotoButton/>
+          <ProfilephotoUsername/>
+          <ProfilephotoTime/>
+      </ImageBackground>
+
+      <View>
+        <Text>Description</Text>        
+      </View>
+
+      <View>
+        <Text>Photos|Videos</Text>        
+      </View>
+
+      <View>
+        <Text>Followers|Following</Text>        
+      </View>
+      
+      <Button title="post"></Button>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'gainsboro',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+
   },
+
+
+  image:{
+    width:300, 
+    height:400,
+    //justifyContent:"flex-start",
+    //alignItems:"flex-end",
+    overflow: 'hidden',
+    borderRadius:10
+  },
+
+
+
 });
