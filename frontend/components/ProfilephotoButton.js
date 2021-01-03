@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 
 function ProfilephotoButton(props) {
     return (
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={()=> console.log("tapped")}>
             <Text>+</Text>
-        </View>
+        </TouchableOpacity>
     );
 }
 

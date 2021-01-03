@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native'
 function ProfilephotoUsername(props) {
     return (
         <View style={styles.usernamer}>
-            <Text>username</Text>
+            <Text onPress={()=>console.log("tapped")}>username</Text>
         </View>
     );
 }
@@ -18,18 +18,7 @@ const styles = StyleSheet.create({
         padding:30,
         margin:80,
         left:10,
-        top:200
-        
-        //top:100
-        //margin:100
-        //justifyContent:"center",
-        // alignItems:"center",
-
-        // backgroundColor: "crimson",
-        // borderWidth:3,
-        // borderColor:"chocolate",
-        // borderRadius:10,  
-        // margin:5    
+        top:200 
     }
 })
 

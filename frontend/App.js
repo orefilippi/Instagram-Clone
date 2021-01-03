@@ -15,7 +15,7 @@ export default function App() {
           <ProfilephotoTime/>
       </ImageBackground>
 
-      <View>
+      {/* <View>
         <Text>Description</Text>        
       </View>
 
@@ -27,7 +27,7 @@ export default function App() {
         <Text>Followers|Following</Text>        
       </View>
       
-      <Button title="post"></Button>
+      <Button title="post"></Button> */}
     </SafeAreaView>
   );
 }
@@ -45,8 +45,6 @@ const styles = StyleSheet.create({
   image:{
     width:300, 
     height:400,
-    //justifyContent:"flex-start",
-    //alignItems:"flex-end",
     overflow: 'hidden',
     borderRadius:10
   },

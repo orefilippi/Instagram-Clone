@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native'
 function ProfilephotoTime(props) {
     return (
         <View style={styles.time}>
-            <Text>hours</Text>
+            <Text onPress={()=>console.log("tapped")}>hours</Text>
         </View>
     );
 }
@@ -17,15 +17,6 @@ const styles = StyleSheet.create({
         margin:80,
         bottom:15,
         left:24
-            //margin:100
-        //justifyContent:"center",
-        // alignItems:"center",
-
-        // backgroundColor: "crimson",
-        // borderWidth:3,
-        // borderColor:"chocolate",
-        // borderRadius:10,  
-        // margin:5    
     }
 })
 
