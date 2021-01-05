@@ -2,7 +2,6 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Text, Image, Button, ImageBackground, View } from 'react-native';
 import ProfilephotoUsername from './components/ProfilephotoUsername';
 import ProfilephotoTime from './components/ProfilephotoTime';
-//import {BlurView} from '../node_modules/@react-native-community/blur'
 
 export default function App() {
 
