@@ -1,34 +1,40 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, Image, Button, ImageBackground, View } from 'react-native';
-import ProfilephotoButton from './components/ProfilephotoButton';
 import ProfilephotoUsername from './components/ProfilephotoUsername';
 import ProfilephotoTime from './components/ProfilephotoTime';
+//import {BlurView} from '../node_modules/@react-native-community/blur'
 
 export default function App() {
+
   return (
+
     <SafeAreaView style={styles.container}>
+
+
       <ImageBackground
         style={styles.image}
-        source={{uri:"https://picsum.photos/seed/picsum/200/300"}}>
-          <ProfilephotoButton/>
-          <ProfilephotoUsername/>
-          <ProfilephotoTime/>
+        source={require('./assets/photo-1520262494112-9fe481d36ec3.jpeg')}>
+
+        <ProfilephotoUsername/>
+        <ProfilephotoTime/>
+
       </ImageBackground>
 
-      {/* <View>
-        <Text>Description</Text>        
+
+      <View style={styles.description}>
+        <Text>Description</Text>
+        <Text>Photos|Videos</Text>
+        <Text>Followers|Following</Text>
+        <Button title="post"></Button>
       </View>
 
-      <View>
-        <Text>Photos|Videos</Text>        
-      </View>
 
-      <View>
-        <Text>Followers|Following</Text>        
-      </View>
-      
-      <Button title="post"></Button> */}
+
     </SafeAreaView>
+
+
+    
+
   );
 }
 
@@ -37,18 +43,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'gainsboro',
     alignItems: 'center',
-    justifyContent: "center",
 
   },
 
 
   image:{
-    width:300, 
+    width:270, 
     height:400,
     overflow: 'hidden',
-    borderRadius:10
+    borderRadius:20,
+    position:"absolute",
+    top:120
   },
 
+  description:{
+    position:"absolute",
+    bottom:200
+  }
 
 
 });

@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native'
 
+
 function ProfilephotoUsername(props) {
     return (
-        <View style={styles.usernamer}>
+        <View style={styles.usernamer}>      
             <Text onPress={()=>console.log("tapped")}>username</Text>
         </View>
     );
@@ -12,14 +13,13 @@ function ProfilephotoUsername(props) {
 const styles = StyleSheet.create({
 
     usernamer:{
-
-        //flex:1,
-  
-        padding:30,
-        margin:80,
-        left:10,
-        top:200 
-    }
+        position:"absolute",
+        overflow:'hidden',
+        bottom:40,
+        left:108,
+        display:'none',
+        display:'flex'
+      }
 })
 
 

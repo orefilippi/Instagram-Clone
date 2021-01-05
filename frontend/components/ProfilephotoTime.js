@@ -12,11 +12,9 @@ function ProfilephotoTime(props) {
 const styles = StyleSheet.create({
 
     time:{
-
-        padding:30,
-        margin:80,
-        bottom:15,
-        left:24
+        position:"absolute",
+        bottom:20,
+        left:122
     }
 })
 
