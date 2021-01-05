@@ -8,6 +8,8 @@ import ProfilePosts from './components/ProfilePosts';
 import ProfileFollowers from './components/ProfileFollowers';
 import ProfilePostButton from './components/ProfilePostButton';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 
 
@@ -28,12 +30,26 @@ export default function App() {
 
 
       <ProfileDescription></ProfileDescription>
-
+    
       <ProfilePosts></ProfilePosts>
 
       <ProfileFollowers></ProfileFollowers>
 
       <ProfilePostButton></ProfilePostButton>
+
+
+
+      <AntDesign name="down" 
+                size={30} 
+                style={styles.downArrow} 
+                onPress={()=>console.log("tapped")}>
+      </AntDesign>
+
+      <Entypo name="documents" 
+                size={30} 
+                style={styles.minusBar}
+                onPress={()=>console.log("tapped")}></Entypo>
+
 
 
     </SafeAreaView>
@@ -69,9 +85,20 @@ const styles = StyleSheet.create({
 
   },
 
-  icon:{
-    justifyContent:'center'
+  downArrow:{
+    position:'absolute',
+    top:'7%',
+    left:'5%'
+    
+  },
+
+  minusBar:{
+    position:'absolute',
+    top:'7%',
+    right:'5%'
+
   }
+
 
 
 });

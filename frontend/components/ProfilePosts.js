@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native'
 function ProfilePosts(props) {
     return (
         <View style={styles.posts}>
-            <Text>Photos|Videos</Text>
+            <Text>Photos|Videos|Date</Text>
         </View>
     );
 }
