@@ -1,15 +1,21 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, Image, Button, ImageBackground, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, Button, ImageBackground, View } from 'react-native';
+
 import ProfilephotoUsername from './components/ProfilephotoUsername';
 import ProfilephotoTime from './components/ProfilephotoTime';
-//import {BlurView} from '../node_modules/@react-native-community/blur'
+import ProfileDescription from './components/ProfileDescription';
+import ProfilePosts from './components/ProfilePosts';
+import ProfileFollowers from './components/ProfileFollowers';
+import ProfilePostButton from './components/ProfilePostButton';
+
+
+
 
 export default function App() {
 
   return (
 
     <SafeAreaView style={styles.container}>
-
 
       <ImageBackground
         style={styles.image}
@@ -21,13 +27,13 @@ export default function App() {
       </ImageBackground>
 
 
-      <View style={styles.description}>
-        <Text>Description</Text>
-        <Text>Photos|Videos</Text>
-        <Text>Followers|Following</Text>
-        <Button title="post"></Button>
-      </View>
+      <ProfileDescription></ProfileDescription>
 
+      <ProfilePosts></ProfilePosts>
+
+      <ProfileFollowers></ProfileFollowers>
+
+      <ProfilePostButton></ProfilePostButton>
 
 
     </SafeAreaView>
@@ -43,22 +49,28 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'gainsboro',
     alignItems: 'center',
-
+    justifyContent:'center'
   },
 
 
   image:{
     width:270, 
     height:400,
+
+
+    alignItems:'center',
+    justifyContent:'flex-end',
+
+
     overflow: 'hidden',
     borderRadius:20,
-    position:"absolute",
-    top:120
+    position:'absolute',
+    bottom:'35%'
+
   },
 
-  description:{
-    position:"absolute",
-    bottom:200
+  icon:{
+    justifyContent:'center'
   }
 
 
