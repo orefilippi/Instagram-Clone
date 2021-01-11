@@ -1,0 +1,22 @@
+{
+  "name": "react-native-blurry",
+  "version": "0.8.0",
+  "source_files": "ios/*.{h,m}",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "authors": {
+    "Alexey Kureev": "kureev-mail@ya.ru"
+  },
+  "license": "MIT",
+  "summary": "Component implementation for UIVisualEffectView's blur and vibrancy effect.",
+  "homepage": "https://github.com/react-native-fellowship/react-native-blurry",
+  "source": {
+    "git": "https://github.com/react-native-fellowship/react-native-blurry.git"
+  },
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

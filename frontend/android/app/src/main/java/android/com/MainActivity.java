@@ -10,6 +10,8 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 import expo.modules.splashscreen.singletons.SplashScreen;
 import expo.modules.splashscreen.SplashScreenImageResizeMode;
 
+import com.cmcewen.blurview.BlurViewPackage;
+
 public class MainActivity extends ReactActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,14 @@ public class MainActivity extends ReactActivity {
     // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
     SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView.class, false);
   }
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new BlurViewPackage()
+      );
+    }
 
 
     /**
