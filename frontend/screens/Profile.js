@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import { StyleSheet,ImageBackground, View, TouchableOpacity ,Text, Button} from 'react-native';
+import { StyleSheet,ImageBackground, View, TouchableOpacity ,Text} from 'react-native';
 
 import ProfilephotoUsername from '../components/ProfilephotoUsername'
 import ProfilephotoTime from '../components/ProfilephotoTime';
@@ -8,11 +8,13 @@ import ProfileDescription from '../components/ProfileDescription';
 import ProfilePosts from '../components/ProfilePosts';
 import ProfileFollowers from '../components/ProfileFollowers';
 import ProfilePostButton from '../components/ProfilePostButton';
+import Photos from '../screens/Photos';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 import Modal from 'react-native-modal'
+
 
 
 function Profile(props) {
@@ -62,11 +64,22 @@ function Profile(props) {
 
             <TouchableOpacity style={styles.photosButton} onPress={toggleModal}><Text>Photos</Text></TouchableOpacity>
 
-            <Modal isVisible={isModalVisible}
+            <Modal  isVisible={isModalVisible}
                     onSwipeComplete={()=>{setModalVisible(false)}}
-                    swipeDirection="down">
+                    onBackdropPress={()=>{setModalVisible(false)}}
+                    swipeDirection="down"
+
+                    animationIn='pulse'
+                    animationInTiming={500}
+
+                    animationOut='fadeOut'
+                    animationOutTiming={200}
+
+                    style={styles.modalStyle}
+                    >
+                    
         
-                <View><Text>Hello</Text></View>
+                <Photos></Photos>
                     
             </Modal>
         
@@ -80,8 +93,7 @@ function Profile(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#d5d5d7',
-        tintColor:"black",
+        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent:'center'
         
@@ -119,10 +131,17 @@ const styles = StyleSheet.create({
     
     },
 
+    modalStyle:{
+        flex: 1,
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop: 22
+    },
+
     photosButton:{
         position:'absolute',
         bottom:'16%'
-    }
+    },
 
 });
 
