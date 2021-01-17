@@ -2,29 +2,18 @@ import React from 'react';
 import {useState} from 'react';
 import { StyleSheet,ImageBackground, View, TouchableOpacity ,Text} from 'react-native';
 
-import ProfilephotoUsername from '../components/ProfilephotoUsername'
-import ProfilephotoTime from '../components/ProfilephotoTime';
-import ProfileDescription from '../components/ProfileDescription';
-import ProfilePosts from '../components/ProfilePosts';
-import ProfileFollowers from '../components/ProfileFollowers';
-import ProfilePostButton from '../components/ProfilePostButton';
-import Photos from '../screens/Photos';
+import Username from '../components/profile/Username'
+import Time from '../components/profile/Time';
+import Description from '../components/profile/Description';
+import Followers from '../components/profile/Followers';
+import PostButton from '../components/profile/PostButton';
 
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import Entypo from 'react-native-vector-icons/Entypo';
-
-import Modal from 'react-native-modal'
-
+import PhotosButton from '../components/profile/PhotosButton'
+import AddProfileButton from '../components/profile/AddProfileButton'
+import OptionsButton from '../components/profile/OptionsButton'
 
 
 function Profile(props) {
-
-
-    const [isModalVisible, setModalVisible] = useState(false);
-
-    const toggleModal = () => {
-        setModalVisible(!isModalVisible);
-    };
 
     return (
     
@@ -34,57 +23,23 @@ function Profile(props) {
             style={styles.image}
             source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}>
     
-            <ProfilephotoUsername/>
-            <ProfilephotoTime/>
+            <Username/>
+            <Time/>
     
             </ImageBackground>
     
+            <Description></Description>
     
-            <ProfileDescription></ProfileDescription>
-        
-            <ProfilePosts></ProfilePosts>
+            <Followers></Followers>
     
-            <ProfileFollowers></ProfileFollowers>
-    
-            <ProfilePostButton></ProfilePostButton>
-    
-    
-    
-            <AntDesign name="down" 
-                    size={30} 
-                    style={styles.downArrow} 
-                    onPress={()=>console.log("tapped")}>
-            </AntDesign>
-    
-            <Entypo name="documents" 
-                    size={30} 
-                    style={styles.options}
-                    onPress={()=>console.log("tapped")}></Entypo>
+            <PostButton></PostButton>
+      
+            <PhotosButton></PhotosButton>
 
+            <AddProfileButton></AddProfileButton>
 
-            <TouchableOpacity style={styles.photosButton} onPress={toggleModal}><Text>Photos</Text></TouchableOpacity>
-
-            <Modal  isVisible={isModalVisible}
-                    onSwipeComplete={()=>{setModalVisible(false)}}
-                    onBackdropPress={()=>{setModalVisible(false)}}
-                    swipeDirection="down"
-
-                    animationIn='pulse'
-                    animationInTiming={500}
-
-                    animationOut='fadeOut'
-                    animationOutTiming={200}
-
-                    style={styles.modalStyle}
-                    >
-                    
-        
-                <Photos></Photos>
-                    
-            </Modal>
-        
-            
-                
+            <OptionsButton></OptionsButton>
+          
         </View>
 
     );
@@ -93,7 +48,7 @@ function Profile(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: '#e8e8e8',
         alignItems: 'center',
         justifyContent:'center'
         
@@ -117,31 +72,7 @@ const styles = StyleSheet.create({
     
     },
     
-    downArrow:{
-        position:'absolute',
-        top:'7%',
-        left:'5%'
-        
-    },
-    
-    options:{
-        position:'absolute',
-        top:'7%',
-        right:'5%'
-    
-    },
 
-    modalStyle:{
-        flex: 1,
-        justifyContent:'center',
-        alignItems:'center',
-        marginTop: 22
-    },
-
-    photosButton:{
-        position:'absolute',
-        bottom:'16%'
-    },
 
 });
 
