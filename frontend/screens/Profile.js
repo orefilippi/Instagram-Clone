@@ -11,6 +11,8 @@ import PostButton from '../components/profile/PostButton';
 import PhotosButton from '../components/profile/PhotosButton'
 import AddProfileButton from '../components/profile/AddProfileButton'
 import OptionsButton from '../components/profile/OptionsButton'
+import ProfilePhotos from './ProfilePhotos';
+import ProfilePhotosButton from '../components/profile/ProfilePhotosButton';
 
 
 function Profile(props) {
@@ -39,6 +41,8 @@ function Profile(props) {
             <AddProfileButton></AddProfileButton>
 
             <OptionsButton></OptionsButton>
+
+            <ProfilePhotosButton></ProfilePhotosButton>
           
         </View>
 
