@@ -2,8 +2,8 @@ import React from 'react';
 import {useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native'
 import Modal from 'react-native-modal'
-import Photos from '../../screens/Photos'
-import ProfilePhotos from '../../screens/ProfilePhotos';
+import Photos from '../../screens/profileScreens/Photos'
+import ProfilePhotos from '../../screens/profileScreens/ProfilePhotos';
 
 function ProfilePhotosButton(props) {
 

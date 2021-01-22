@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native'
 import Modal from 'react-native-modal'
-import Options from '../../screens/Options'
+import Options from '../../screens/profileScreens/Options'
 import Entypo from 'react-native-vector-icons/Entypo';
 
 function OptionsButton(props) {
@@ -16,6 +16,7 @@ function OptionsButton(props) {
 
                 <Entypo name="documents" 
                     size={30} 
+                    color='#991414'
                     onPress={()=>{setModalVisible(true)}}>
                 </Entypo>
 

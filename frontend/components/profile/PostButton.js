@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import {StyleSheet, TouchableOpacity, Text, View, PermissionsAndroid} from 'react-native'
 import Modal from 'react-native-modal'
-import Post from '../../screens/Post'
+import Post from '../../screens/profileScreens/Post'
 
 
 

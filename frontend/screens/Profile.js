@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import { StyleSheet,ImageBackground, View, TouchableOpacity ,Text} from 'react-native';
+import { StyleSheet,ImageBackground, View, Button, Screen, TouchableOpacity ,Text} from 'react-native';
 
 import Username from '../components/profile/Username'
 import Time from '../components/profile/Time';
@@ -11,31 +11,31 @@ import PostButton from '../components/profile/PostButton';
 import PhotosButton from '../components/profile/PhotosButton'
 import AddProfileButton from '../components/profile/AddProfileButton'
 import OptionsButton from '../components/profile/OptionsButton'
-import ProfilePhotos from './ProfilePhotos';
+import ProfilePhotos from './profileScreens/ProfilePhotos';
 import ProfilePhotosButton from '../components/profile/ProfilePhotosButton';
 
 
-function Profile(props) {
+function Profile({navigation}) {
 
     return (
-    
+        
         <View style={styles.container}>
 
             <ImageBackground
             style={styles.image}
             source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}>
-    
+
             <Username/>
             <Time/>
-    
+
             </ImageBackground>
-    
+
             <Description></Description>
-    
+
             <Followers></Followers>
-    
+
             <PostButton></PostButton>
-      
+
             <PhotosButton></PhotosButton>
 
             <AddProfileButton></AddProfileButton>
@@ -43,8 +43,11 @@ function Profile(props) {
             <OptionsButton></OptionsButton>
 
             <ProfilePhotosButton></ProfilePhotosButton>
-          
+        
         </View>
+
+        
+        
 
     );
 }
@@ -75,6 +78,12 @@ const styles = StyleSheet.create({
 
     
     },
+
+    button:{
+        position:"absolute",
+        bottom:'20%',
+        left:'10%'
+    }
     
 
 

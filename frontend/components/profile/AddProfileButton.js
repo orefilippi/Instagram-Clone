@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native'
 import Modal from 'react-native-modal'
-import AddProfile from '../../screens/AddProfile'
+import AddProfile from '../../screens/profileScreens/AddProfile'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
@@ -17,6 +17,7 @@ function AddProfileButton(props) {
 
             <AntDesign name="down" 
                     size={30} 
+                    color='#991414'
                     onPress={()=>{setModalVisible(true)}}>
             </AntDesign>
 
