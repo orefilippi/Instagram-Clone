@@ -55,9 +55,10 @@ function Profile({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#e8e8e8',
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        backgroundColor:'gainsboro'
         
     },
     

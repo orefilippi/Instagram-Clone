@@ -1,0 +1,82 @@
+import React from 'react'
+import { StyleSheet, View, Animated, FlatList, Image, Text,} from 'react-native';
+
+import Carousel from 'react-native-snap-carousel'
+
+import ProfilePhotos from './profileScreens/ProfilePhotos'
+
+function Home(props) {
+
+    const images = [
+        {
+          id: 1,
+          image:{uri:"https://source.unsplash.com/collection/190327/1600x900"}
+        },
+        {
+          id: 2,
+          image:{uri:"https://source.unsplash.com/collection/190547/1600x900"}
+        },
+        {
+          id: 3,
+          image:{uri:"https://source.unsplash.com/collection/190527/1600x900"}
+        },
+        {
+          id: 4,
+          image:{uri:"https://source.unsplash.com/collection/190727/1600x900"}
+        }
+    ];
+    
+
+    return (
+
+        
+        <View style={styles.container}>
+
+            <Carousel 
+                data={images}
+                
+                vertical
+                sliderHeight={800}
+                itemHeight={1300}
+
+                renderItem={( {item } ) => {
+
+                    return <View>
+                                <Image
+                                    source={item.image}
+                                    style={{
+                                        width:390,
+                                        height:500,
+                                        borderRadius:20,
+                                        resizeMode:'cover',
+                                    }}
+                                />
+                            </View>
+                
+                }}
+
+                
+                
+            />
+            
+        
+
+        </View>
+
+    );
+}
+
+const styles = StyleSheet.create({
+    
+    container:{
+        flex:1,
+        alignSelf:'center',
+        alignContent:'center',
+        paddingTop:100,
+        
+    },
+
+});
+
+
+export default Home;
