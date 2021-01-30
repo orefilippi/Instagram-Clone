@@ -8,9 +8,9 @@ function Followers(props) {
 
 
     return (
-        <View style={styles.followI}>
-            <Text style={styles.followII} onPress={Followers}>followers</Text>
-            <Text style={styles.followIII} onPress={Following}>following</Text>
+        <View style={styles.follow}>
+            <Text style={styles.followersText} onPress={Followers}>followers</Text>
+            <Text style={styles.followingText} onPress={Following}> | following</Text>
         </View>
 
 
@@ -20,33 +20,40 @@ function Followers(props) {
 
 const styles = StyleSheet.create({
 
-    followI:{ 
+    follow:{ 
+
+        flex:1,
+        flexDirection:'row',
         position:'absolute',
-        bottom: '21%',
-        borderWidth: 1.5,
-        borderRadius: 4,
-        padding: 0.5,
-        backgroundColor:'#e8e8e8',
-        borderColor:'white',                                                                                                                                                                                                                                            
+        bottom: '20%',
+
+        width: 140,
+        height: 30,
+
+        alignItems:'center',
+        justifyContent:'center',
+
+        borderWidth: 0.3,
+        borderRadius: 5,
+        borderColor:'#a18f0a',
+
+        backgroundColor:'white',
+        shadowColor:'black',
+        shadowOpacity:0.4,
+        shadowOffset:{
+            height:5,
+            width:10
+        },
+
+        elevation:4                                                                                                                                                                                                                                           
     },
 
-    followII:{
-        borderWidth: 1.3,
-        borderRadius: 4,
-        padding: 4, 
-        borderColor:'#991414',
-        textAlign:'center',
-        fontSize:16,                                                                                                                                                                                                                                            
+    followersText:{
+        fontSize: 15,                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     },
 
-    followIII:{
-
-        borderWidth: 1.3,
-        borderRadius: 4,
-        padding: 4, 
-        borderColor:'#991414',
-        textAlign:'center',
-        fontSize:16,
+    followingText:{
+        fontSize: 15,                                                                                                                                                                                                                     
     }
 
 });

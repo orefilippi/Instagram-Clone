@@ -17,7 +17,7 @@ function AddProfileButton(props) {
 
             <AntDesign name="down" 
                     size={30} 
-                    color='#991414'
+                    color='black'
                     onPress={()=>{setModalVisible(true)}}>
             </AntDesign>
 

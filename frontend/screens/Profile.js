@@ -1,6 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
-import { StyleSheet,ImageBackground, View, Button, Screen, TouchableOpacity ,Text} from 'react-native';
+import { StyleSheet,ImageBackground, View, Dimensions, Image} from 'react-native';
 
 import Username from '../components/profile/Username'
 import Time from '../components/profile/Time';
@@ -11,11 +10,14 @@ import PostButton from '../components/profile/PostButton';
 import PhotosButton from '../components/profile/PhotosButton'
 import AddProfileButton from '../components/profile/AddProfileButton'
 import OptionsButton from '../components/profile/OptionsButton'
-import ProfilePhotos from './profileScreens/ProfilePhotos';
 import ProfilePhotosButton from '../components/profile/ProfilePhotosButton';
 
 
-function Profile({navigation}) {
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
+
+
+function Profile() {
 
     return (
         
@@ -46,8 +48,6 @@ function Profile({navigation}) {
         
         </View>
 
-        
-        
 
     );
 }
@@ -58,32 +58,36 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         alignItems: 'center',
         justifyContent:'center',
-        backgroundColor:'gainsboro'
+        backgroundColor:'white'
         
     },
     
     
     image:{
-        width:270, 
-        height:400,
-    
+
+        width: width * 0.7, 
+        height: height * 0.5,
     
         alignItems:'center',
         justifyContent:'flex-end',
     
-    
         overflow: 'hidden',
-        borderRadius:20,
         position:'absolute',
-        bottom:'35%',
+        bottom: height / 3,
 
-    
-    },
+        borderWidth: 0.5,
+        borderRadius: 20,
+        borderColor:'#665d17',
 
-    button:{
-        position:"absolute",
-        bottom:'20%',
-        left:'10%'
+        backgroundColor: 'white',
+        shadowColor:'black',
+        shadowOpacity:0.4,
+        shadowOffset:{
+            height:5,
+            width:10
+        },
+
+        elevation:8
     }
     
 

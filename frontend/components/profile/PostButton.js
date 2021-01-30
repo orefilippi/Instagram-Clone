@@ -19,7 +19,7 @@ function PostButton(props) {
         <View style={styles.postButton}>
 
             <TouchableOpacity style={styles.buttonI} onPress={toggleModal} >
-                <Text style={styles.buttonII}>Post</Text>
+                <Text style={styles.postButtonText}>Post</Text>
             </TouchableOpacity>
 
 
@@ -53,37 +53,45 @@ function PostButton(props) {
 }
 
 const styles = StyleSheet.create({
+    
+    postButton:{
+        
+        position:'absolute',
+        bottom: '15%',
 
-    buttonI:{ 
-        borderWidth: 1.5,
-        borderRadius: 4,
-        padding: 0.5,
-        backgroundColor:'#e8e8e8',
-        borderColor:'white',                                                                                                                                                                                                                                            
+        width: 60,
+        height: 26,
+
+        alignItems:'center',
+        justifyContent:'center',
+
+        borderWidth: 0.3,
+        borderRadius: 5,
+        borderColor:'#a18f0a',
+
+        backgroundColor:'white',
+        shadowColor:'black',
+        shadowOpacity:0.4,
+        shadowOffset:{
+            height:5,
+            width:10
+        },
+
+        elevation:4
     },
 
-    buttonII:{
-        borderWidth: 1.3,
-        borderRadius: 4,
-        padding: 4, 
-        borderColor:'#991414',
-        textAlign:'center',
-        fontSize:16,                                                                                                                                                                                                                                            
+
+    postButtonText:{
+        fontSize: 15,                                                                                                                                                                                                                     
     },
 
     modalStyle:{
         flex: 1,
         justifyContent:'center',
         alignItems:'center',
-    },
-
-
-    postButton:{
-        
-        position:'absolute',
-        bottom:'16%'
-
     }
+
+
 
 
 });

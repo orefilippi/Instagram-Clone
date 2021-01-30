@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
     description:{
         position:'absolute',
-        bottom: '30%'
+        bottom: '27%'
     }
 
 });

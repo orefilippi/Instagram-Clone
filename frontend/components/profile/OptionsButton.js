@@ -16,7 +16,7 @@ function OptionsButton(props) {
 
                 <Entypo name="documents" 
                     size={30} 
-                    color='#991414'
+                    color='black'
                     onPress={()=>{setModalVisible(true)}}>
                 </Entypo>
 
@@ -62,8 +62,7 @@ const styles = StyleSheet.create({
     options:{
         position:'absolute',
         top:'7%',
-        right:'5%'
-    
+        right:'5%',
     },
 
 

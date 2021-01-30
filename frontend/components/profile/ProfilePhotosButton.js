@@ -16,10 +16,10 @@ function ProfilePhotosButton(props) {
 
     return (
 
-        <View style={styles.photosButton}>
+        <View style={styles.profilePhotosButton}>
 
-            <TouchableOpacity style={styles.profilePhotosButtonI} onPress={toggleModal}>
-                <Text style={styles.profilePhotosButtonII}>Profile Photos</Text>
+            <TouchableOpacity  onPress={toggleModal}>
+                <Text style={styles.profilePhotosText}>Profile Photos</Text>
             </TouchableOpacity>
 
 
@@ -53,21 +53,35 @@ function ProfilePhotosButton(props) {
 
 const styles = StyleSheet.create({
 
-    profilePhotosButtonI:{
-        borderWidth: 1.5,
-        borderRadius: 4,
-        padding: 0.5,
-        backgroundColor:'#e8e8e8',
-        borderColor:'white',  
+    profilePhotosButton:{
+
+        position:'absolute',
+        bottom: '5%',
+
+        width: 100,
+        height: 28,
+
+        alignItems:'center',
+        justifyContent:'center',
+
+        borderWidth: 0.3,
+        borderRadius: 5,
+        borderColor:'#a18f0a',
+
+        backgroundColor:'white',
+        shadowColor:'black',
+        shadowOpacity:0.4,
+        shadowOffset:{
+            height:5,
+            width:10
+        },
+
+        elevation:4,
+
     },
 
-    profilePhotosButtonII:{
-        borderWidth: 1.3,
-        borderRadius: 4,
-        padding: 4, 
-        borderColor:'#991414',
-        textAlign:'center',
-        fontSize:16,
+    profilePhotosText:{
+        fontSize: 15,
     },
 
 
@@ -78,12 +92,6 @@ const styles = StyleSheet.create({
     },
 
 
-    photosButton:{
-        
-        position:'absolute',
-        bottom:'5%'
-
-    }
 
 
 });

@@ -1,8 +1,9 @@
 import React from 'react';
 import {useState} from 'react';
-import {StyleSheet, TouchableOpacity, Text, View} from 'react-native'
+import {StyleSheet, TouchableOpacity, Text, View, Dimensions, Platform, PixelRatio} from 'react-native'
 import Modal from 'react-native-modal'
 import Photos from '../../screens/profileScreens/Photos'
+
 
 function PhotosButton(props) {
 
@@ -17,8 +18,8 @@ function PhotosButton(props) {
 
         <View style={styles.photosButton}>
 
-            <TouchableOpacity style={styles.photosButtonI} onPress={toggleModal}>
-                <Text style={styles.photosButtonII}>Photos</Text>
+            <TouchableOpacity onPress={toggleModal}>
+                <Text style={styles.PhotosButtonText}>Photos</Text>
             </TouchableOpacity>
 
 
@@ -52,21 +53,34 @@ function PhotosButton(props) {
 
 const styles = StyleSheet.create({
 
-    photosButtonI:{
-        borderWidth: 1.5,
-        borderRadius: 4,
-        padding: 0.5,
-        backgroundColor:'#e8e8e8',
-        borderColor:'white',  
+    photosButton:{ 
+        position:'absolute',
+        bottom: '10%',
+
+        width: 70,
+        height: 26,
+
+        alignItems:'center',
+        justifyContent:'center',
+
+        borderWidth: 0.3,
+        borderRadius: 5,
+        borderColor:'#a18f0a',
+
+        backgroundColor:'white',
+        shadowColor:'black',
+        shadowOpacity:0.4,
+        shadowOffset:{
+            height:5,
+            width:10
+        },
+
+        elevation:4
+
     },
 
-    photosButtonII:{
-        borderWidth: 1.3,
-        borderRadius: 4,
-        padding: 4, 
-        borderColor:'#991414',
-        textAlign:'center',
-        fontSize:16,
+    PhotosButtonText:{
+        fontSize: 15,
     },
 
 
@@ -74,15 +88,9 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent:'center',
         alignItems:'center',
-    },
-
-
-    photosButton:{
-        
-        position:'absolute',
-        bottom:'10%'
-
     }
+
+
 
 
 });
