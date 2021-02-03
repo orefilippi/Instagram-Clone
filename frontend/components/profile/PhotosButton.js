@@ -29,7 +29,7 @@ function PhotosButton(props) {
                     onBackdropPress={()=>{setModalVisible(false)}}
                     swipeDirection="down"
 
-                    animationIn='pulse'
+                    animationIn='fadeIn'
                     animationInTiming={500}
 
                     animationOut='fadeOut'

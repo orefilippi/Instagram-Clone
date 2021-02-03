@@ -1,5 +1,4 @@
 import React from 'react'
-import {useState} from 'react'
 import { StyleSheet, View, Image, ImageBackground, Animated} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo'
 import Carousel from 'react-native-snap-carousel'
@@ -12,22 +11,42 @@ function Home(props) {
     const images = [
         {
           id: 1,
-          image:{uri:"https://source.unsplash.com/collection/190327/1600x900"}
+          image:{uri:"https://source.unsplash.com/collection/190327/1600x900"},
+          selector:true
         },
         {
           id: 2,
-          image:{uri:"https://source.unsplash.com/collection/190547/1600x900"}
+          image:{uri:"https://source.unsplash.com/collection/190547/1600x900"},
+          selector:false
         },
         {
           id: 3,
-          image:{uri:"https://source.unsplash.com/collection/190527/1600x900"}
+          image:{uri:"https://source.unsplash.com/collection/190527/1600x900"},
+          selector:false
         },
         {
           id: 4,
-          image:{uri:"https://source.unsplash.com/collection/190727/1600x900"}
+          image:{uri:"https://source.unsplash.com/collection/190727/1600x900"},
+          selector:true
+
         }
     ];
 
+    const imageSlider = [
+        {
+          id: 1,
+          image:{uri:"https://source.unsplash.com/collection/190327/1600x900"},
+        },
+        {
+          id: 2,
+          image:{uri:"https://source.unsplash.com/collection/190547/1600x900"},
+        }
+    ];
+
+
+
+
+    const selector = false
 
     return (
 
@@ -38,42 +57,92 @@ function Home(props) {
                 data={images}
                 
                 vertical
-                sliderHeight={800}
-                itemHeight={1300}
+                sliderHeight={400}
+                itemHeight={1000}
 
                 renderItem={( {item } ) => {
 
-                    return <View style={{borderRadius:20,shadowOffset:{width:0,height:5}, shadowOpacity:1, shadowRadius:20, elevation:20}}>
-                                <ImageBackground
-                                    source={item.image}
-                                    style={{
-                                        width:393,
-                                        height:500,
-                                    }}
-                                    
-                                    imageStyle={{borderRadius:10,  resizeMode:'cover'}}
-                                    
-                                    >
+                    if (item.selector==true) {
+                        return <View style={{ flex:1, }}>
+                                    <Carousel   
+                                        data={imageSlider}
+                                        
+                                        horizontal
+                                        sliderWidth={400}
+                                        itemWidth={800}
+                                        renderItem={( {item } ) => {
+                                            return <ImageBackground
+                                                    source={item.image}
+                                                    style={{
+                                                        width:393,
+                                                        height:500,
+                                                        borderRadius:5,
+                                                        borderWidth:2,
+                                                        borderColor:'red'
+                                                    }}
+                                                    
+                                                    imageStyle={{ borderRadius:3, resizeMode:'cover'}}
+                                                    
+                                                    >
 
-                                        <Entypo style={styles.redDot} name='dot-single' size={80} color='red'></Entypo>
+                                                        <Entypo style={styles.redDot} name='dot-single' size={80} color='red'></Entypo>
 
-                                        <Entypo style={styles.greenDot}  name='dot-single' size={80} color='lawngreen'></Entypo>
+                                                        <Entypo style={styles.greenDot}  name='dot-single' size={80} color='lawngreen'></Entypo>
 
-                                        <Entypo style={styles.yellowDot} name='dot-single' size={80} color='yellow'></Entypo>
+                                                        <Entypo style={styles.yellowDot} name='dot-single' size={80} color='yellow'></Entypo>
 
-                                        <Entypo style={styles.orangeDot} name='dot-single' size={80} color='orange'></Entypo>
+                                                        <Entypo style={styles.orangeDot} name='dot-single' size={80} color='orange'></Entypo>
 
-                                        <Entypo style={styles.lightblueDot} name='dot-single' size={80} color='navajowhite'></Entypo>
-
-
-                                        <Image
-                                            style={styles.profileImage}
-                                            source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}/>
+                                                        <Entypo style={styles.lightblueDot} name='dot-single' size={80} color='navajowhite'></Entypo>
 
 
-                                    </ImageBackground>
+                                                        <Image
+                                                            style={styles.profileImage}
+                                                            source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}/>
 
-                            </View>
+                                                </ImageBackground>
+        
+                                        }}>
+
+                                    </Carousel>
+
+                                </View>
+                    }
+
+                    else {
+                        return <View style={{borderRadius:20,shadowOffset:{width:0,height:5}, shadowOpacity:1, shadowRadius:20, elevation:20}}>
+                        <ImageBackground
+                            source={item.image}
+                            style={{
+                                width:393,
+                                height:500,
+                            }}
+                            
+                            imageStyle={{borderRadius:10,  resizeMode:'cover'}}
+                            
+                            >
+
+                                <Entypo style={styles.redDot} name='dot-single' size={80} color='red'></Entypo>
+
+                                <Entypo style={styles.greenDot}  name='dot-single' size={80} color='lawngreen'></Entypo>
+
+                                <Entypo style={styles.yellowDot} name='dot-single' size={80} color='yellow'></Entypo>
+
+                                <Entypo style={styles.orangeDot} name='dot-single' size={80} color='orange'></Entypo>
+
+                                <Entypo style={styles.lightblueDot} name='dot-single' size={80} color='navajowhite'></Entypo>
+
+
+                                <Image
+                                    style={styles.profileImage}
+                                    source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}/>
+
+
+                        </ImageBackground>
+
+                    </View>
+                    }
+
                 
                 }}
 
