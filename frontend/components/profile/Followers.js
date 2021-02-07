@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
 
         borderWidth: 0.3,
         borderRadius: 5,
-        borderColor:'#a18f0a',
+        borderColor:'white',
 
-        backgroundColor:'white',
+        backgroundColor:'#1f291b',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -49,11 +49,13 @@ const styles = StyleSheet.create({
     },
 
     followersText:{
-        fontSize: 15,                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        fontSize: 15,
+        color:'white'                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     },
 
     followingText:{
         fontSize: 15,                                                                                                                                                                                                                     
+        color:'white'                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     }
 
 });

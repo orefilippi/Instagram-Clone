@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
 
     photosButton:{ 
         position:'absolute',
-        bottom: '10%',
+        bottom: '15%',
+        left: '31%',
 
         width: 70,
         height: 26,
@@ -65,9 +66,9 @@ const styles = StyleSheet.create({
 
         borderWidth: 0.3,
         borderRadius: 5,
-        borderColor:'#a18f0a',
+        borderColor:'white',
 
-        backgroundColor:'white',
+        backgroundColor:'#1f291b',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -81,6 +82,7 @@ const styles = StyleSheet.create({
 
     PhotosButtonText:{
         fontSize: 15,
+        color:'white'
     },
 
 

@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     profilePhotosButton:{
 
         position:'absolute',
-        bottom: '5%',
+        bottom: '10%',
 
         width: 100,
         height: 28,
@@ -66,9 +66,9 @@ const styles = StyleSheet.create({
 
         borderWidth: 0.3,
         borderRadius: 5,
-        borderColor:'#a18f0a',
+        borderColor:'white',
 
-        backgroundColor:'white',
+        backgroundColor:'#1f291b',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
 
     profilePhotosText:{
         fontSize: 15,
+        color:'white'
     },
 
 

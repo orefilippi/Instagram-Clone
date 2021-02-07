@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         alignContent:'center',
         paddingTop:100,
-        backgroundColor:'white'
+        backgroundColor:'#030502'
     },
 
     profileImage:{

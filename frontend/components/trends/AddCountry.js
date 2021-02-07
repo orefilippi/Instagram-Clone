@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
     },
 
     countryText:{
-        fontSize:35
+        fontSize:35,
+        color:'white'
     },
     
     container: {
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
         height:550,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor: "white",
+        backgroundColor: '#141402',
   
         padding:4,
   

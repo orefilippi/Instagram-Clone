@@ -65,11 +65,13 @@ const styles = StyleSheet.create({
     trendsArrow:{
         position:'relative',
         bottom:'98%',
-        left:'10.5%'
+        left:'10.5%',
+        color:'white'
     },
     
     trendsText:{
-        fontSize:14
+        fontSize:14,
+        color:'white'
     }
         
 

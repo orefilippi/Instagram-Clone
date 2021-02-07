@@ -16,7 +16,7 @@ function OptionsButton(props) {
 
                 <Entypo name="documents" 
                     size={30} 
-                    color='black'
+                    color='white'
                     onPress={()=>{setModalVisible(true)}}>
                 </Entypo>
 

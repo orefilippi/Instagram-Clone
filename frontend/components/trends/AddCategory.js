@@ -6,6 +6,7 @@ import AddProfile from '../../screens/profileScreens/AddProfile'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import SelectCategory from '../../screens/trendScreens/SelectCategory'
+import { color } from 'react-native-reanimated';
 
 
 function AddCategory(props) {
@@ -67,11 +68,13 @@ const styles = StyleSheet.create({
     categoryArrow:{
         position:'relative',
         bottom:'193%',
-        left:'31.5%'
+        left:'31.5%',
+        color:'white'
     },
     
     categoryText:{
-        fontSize:14
+        fontSize:14,
+        color:'white'
     }
         
 });

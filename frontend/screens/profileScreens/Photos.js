@@ -83,10 +83,10 @@ const styles = StyleSheet.create({
       width:390,
       height:600,
       padding: 5,
-      backgroundColor: "white",
+      backgroundColor: "#141402",
       borderRadius: 10,
       borderWidth:1,
-      borderColor:'#a18f0a'
+      borderColor:'white'
     },
 
     imageStyle:{

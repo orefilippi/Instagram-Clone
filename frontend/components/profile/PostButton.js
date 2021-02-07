@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         
         position:'absolute',
         bottom: '15%',
+        right: '31%',
 
         width: 60,
         height: 26,
@@ -67,9 +68,9 @@ const styles = StyleSheet.create({
 
         borderWidth: 0.3,
         borderRadius: 5,
-        borderColor:'#a18f0a',
+        borderColor:'white',
 
-        backgroundColor:'white',
+        backgroundColor:'#1f291b',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -82,7 +83,8 @@ const styles = StyleSheet.create({
 
 
     postButtonText:{
-        fontSize: 15,                                                                                                                                                                                                                     
+        fontSize: 15,
+        color:'white',                                                                                                                                                                                                                
     },
 
     modalStyle:{
