@@ -8,7 +8,7 @@ function ProfilePhotos(props) {
     const redValueSecondMove = new Animated.ValueXY({x:0,y:0})
     const fadeRedText = new Animated.Value(0)
 
-    const redDot =Animated.sequence([ 
+    const redDot = Animated.sequence([ 
         Animated.timing(redValueFirstMove, {
             toValue: { x:0 , y:0 },
             duration: 1000,

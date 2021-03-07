@@ -42,10 +42,6 @@ function PostButton(props) {
  
             </Modal>
 
-
-
-
-
         </View>
 
 
@@ -56,21 +52,19 @@ const styles = StyleSheet.create({
     
     postButton:{
         
-        position:'absolute',
-        bottom: '15%',
-        right: '31%',
-
         width: 60,
         height: 26,
-
         alignItems:'center',
         justifyContent:'center',
+
+        top:-4,
+        left:180,
 
         borderWidth: 0.3,
         borderRadius: 5,
         borderColor:'white',
 
-        backgroundColor:'#1f291b',
+        backgroundColor:'#EBE8EB',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -84,7 +78,7 @@ const styles = StyleSheet.create({
 
     postButtonText:{
         fontSize: 15,
-        color:'white',                                                                                                                                                                                                                
+        color:'black',                                                                                                                                                                                                                
     },
 
     modalStyle:{

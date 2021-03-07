@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor:'white',
 
-        backgroundColor:'#1f291b',
+        backgroundColor:'#EBE8EB',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
     PhotosButtonText:{
         fontSize: 15,
-        color:'white'
+        color:'black'
     },
 
 

@@ -26,7 +26,7 @@ function AddCategory(props) {
             </TouchableOpacity>
 
             <AntDesign name="down" 
-                    size={10} 
+                    size={14} 
                     style={styles.categoryArrow}
                     color='black'
                     onPress={()=>{setModalVisible(true)}}>
@@ -61,20 +61,20 @@ const styles = StyleSheet.create({
 
     category:{
         position:'relative',
-        bottom:'152.5%',
-        left:'18%'
+        bottom:'150%',
+        left:'30%'
     },
 
     categoryArrow:{
         position:'relative',
         bottom:'193%',
-        left:'31.5%',
-        color:'white'
+        left:'46%',
+        color:'black'
     },
     
     categoryText:{
-        fontSize:14,
-        color:'white'
+        fontSize:16,
+        color:'black'
     }
         
 });

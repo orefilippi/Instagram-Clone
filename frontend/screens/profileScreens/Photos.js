@@ -80,10 +80,10 @@ function Photos(props) {
 const styles = StyleSheet.create({
 
     container: {
-      width:390,
-      height:600,
+      width:410,
+      height:800,
       padding: 5,
-      backgroundColor: "#141402",
+      backgroundColor: "#EBE8EB",
       borderRadius: 10,
       borderWidth:1,
       borderColor:'white'

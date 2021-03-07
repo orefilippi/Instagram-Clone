@@ -17,7 +17,7 @@ function AddProfileButton(props) {
 
             <AntDesign name="down" 
                     size={30} 
-                    color='white'
+                    color='black'
                     onPress={()=>{setModalVisible(true)}}>
             </AntDesign>
 
@@ -60,10 +60,8 @@ const styles = StyleSheet.create({
 
 
     downArrow:{
-        position:'absolute',
-        top:'7%',
-        left:'5%',
-        
+        top:22,
+        left:25
     },
 
 

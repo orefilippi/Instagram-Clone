@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native'
 function Description(props) {
     return (
         <View style={styles.description}>
-            <Text style={{color:'white'}}>Description</Text>
+            <Text style={{color:'black'}}>Description</Text>
         </View>
     );
 }

@@ -25,7 +25,7 @@ function AddTrend(props) {
             </TouchableOpacity>
 
             <AntDesign name="down" 
-                    size={10} 
+                    size={14} 
                     style={styles.trendsArrow}
                     color='black'
                     onPress={()=>{setModalVisible(true)}}>
@@ -59,19 +59,20 @@ const styles = StyleSheet.create({
 
     trends:{
         position:'relative',
-        bottom:'55%',
+        bottom:'50%',
+        left:'10%'
     },
 
     trendsArrow:{
         position:'relative',
-        bottom:'98%',
-        left:'10.5%',
-        color:'white'
+        bottom:'94.5%',
+        left:'22.5%',
+        color:'black'
     },
     
     trendsText:{
-        fontSize:14,
-        color:'white'
+        fontSize:16,
+        color:'black'
     }
         
 

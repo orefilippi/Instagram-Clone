@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, Animated} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import { StyleSheet, View, ScrollView} from 'react-native';
+
 
 import AddTrend from '../components/trends/AddTrend'
 import AddCategory from '../components/trends/AddCategory'
@@ -8,21 +8,47 @@ import AddCountry from '../components/trends/AddCountry'
 
 import Photos from '../screens/profileScreens/Photos'
 
+
 function Trends(props) {
 
-    return (
+    const images = [
+        {
+          id: 1,
+          image:{uri:"https://source.unsplash.com/collection/190327/1600x900"}
+        },
+        {
+          id: 2,
+          image:{uri:"https://source.unsplash.com/collection/190547/1600x900"}
+        },
+        {
+          id: 3,
+          image:{uri:"https://source.unsplash.com/collection/190527/1600x900"}
+        },
+        {
+          id: 4,
+          image:{uri:"https://source.unsplash.com/collection/190727/1600x900"}
+        },
         
-        <View style={styles.container}>
-            
-            <AddCountry></AddCountry>
+    ];
 
-            <AddTrend></AddTrend>
+    return (
 
-            <AddCategory></AddCategory>
+      <ScrollView>
 
-            <Photos></Photos>
+        <View style={{top:20, left:150}}>
+
+          <AddCountry></AddCountry>
+          <AddTrend></AddTrend>
+          <AddCategory></AddCategory>
 
         </View>
+
+        
+        <View style={{top:-10}}>
+            <Photos></Photos>
+        </View>
+
+      </ScrollView>
 
 
 
@@ -31,12 +57,6 @@ function Trends(props) {
 
 const styles = StyleSheet.create({
     
-    container:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor:'#030502',
-    },
 
 
 });

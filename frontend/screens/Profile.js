@@ -1,16 +1,20 @@
 import React from 'react';
-import { StyleSheet,ImageBackground, View, Dimensions, Image} from 'react-native';
+import { StyleSheet, Text, ImageBackground, View, Dimensions, Image, FlatList, TouchableWithoutFeedback, ScrollView} from 'react-native';
 
 import Username from '../components/profile/Username'
 import Time from '../components/profile/Time';
 import Description from '../components/profile/Description';
-import Followers from '../components/profile/Followers';
+import Connections from '../components/profile/Connections';
 import PostButton from '../components/profile/PostButton';
 
 import PhotosButton from '../components/profile/PhotosButton'
 import AddProfileButton from '../components/profile/AddProfileButton'
 import OptionsButton from '../components/profile/OptionsButton'
 import ProfilePhotosButton from '../components/profile/ProfilePhotosButton';
+import TrendsAnimationsButton from '../components/profile/TrendsAnimationsButton'
+
+
+import Photos from '../screens/profileScreens/Photos'
 
 
 const width = Dimensions.get('screen').width
@@ -21,59 +25,51 @@ function Profile() {
 
     return (
         
-        <View style={styles.container}>
+        <ScrollView>
 
-            <ImageBackground
-            style={styles.image}
-            source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}>
+            <View>
+                <AddProfileButton></AddProfileButton>
+                <OptionsButton></OptionsButton>
+            </View>
 
-            <Username/>
-            <Time/>
+            <View style={{top:40, left:62}}>  
+                <ImageBackground
+                    style={styles.image}
+                    source={require('../assets/photo-1520262494112-9fe481d36ec3.jpeg')}>
+                    <Username/>
+                    <Time/>
+                </ImageBackground>
+            </View>
 
-            </ImageBackground>
+            <View style={{top:100}}>
+                <Connections></Connections>
+                <PostButton></PostButton>
+                <ProfilePhotosButton></ProfilePhotosButton>
+                <TrendsAnimationsButton></TrendsAnimationsButton>
+            </View>
 
-            <Description></Description>
+            <View style={{height:800, top:200}}>
+                <Photos></Photos>
+            </View>
 
-            <Followers></Followers>
-
-            <PostButton></PostButton>
-
-            <PhotosButton></PhotosButton>
-
-            <AddProfileButton></AddProfileButton>
-
-            <OptionsButton></OptionsButton>
-
-            <ProfilePhotosButton></ProfilePhotosButton>
-        
-        </View>
+        </ScrollView>
 
 
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent:'center',
-        backgroundColor:'#030502'
-        
-    },
-    
     
     image:{
-
         width: width * 0.7, 
         height: height * 0.5,
+
+        top:10,
     
         alignItems:'center',
         justifyContent:'flex-end',
     
         overflow: 'hidden',
-        position:'absolute',
-        bottom: height / 3,
 
         borderWidth: 3,
         borderRadius: 20,
@@ -90,7 +86,6 @@ const styles = StyleSheet.create({
         elevation:8
     }
     
-
 
 });
 

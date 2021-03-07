@@ -19,7 +19,7 @@ function ProfilePhotosButton(props) {
         <View style={styles.profilePhotosButton}>
 
             <TouchableOpacity  onPress={toggleModal}>
-                <Text style={styles.profilePhotosText}>Profile Photos</Text>
+                <Text style={styles.profilePhotosText}>Photos Animations</Text>
             </TouchableOpacity>
 
 
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
 
     profilePhotosButton:{
 
-        position:'absolute',
-        bottom: '10%',
-
-        width: 100,
+        width: 150,
         height: 28,
+
+        top:3,
+        left:55,
 
         alignItems:'center',
         justifyContent:'center',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor:'white',
 
-        backgroundColor:'#1f291b',
+        backgroundColor:'#EBE8EB',
         shadowColor:'black',
         shadowOpacity:0.4,
         shadowOffset:{
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
     profilePhotosText:{
         fontSize: 15,
-        color:'white'
+        color:'black'
     },
 
 
