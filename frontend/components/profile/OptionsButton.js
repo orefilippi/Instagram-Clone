@@ -3,11 +3,11 @@ import {useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native'
 import Modal from 'react-native-modal'
 import Options from '../../screens/profileScreens/Options'
-import Entypo from 'react-native-vector-icons/Entypo';
+import Entypo from 'react-native-vector-icons/Entypo'
 
 function OptionsButton(props) {
 
-    const [isModalVisible, setModalVisible] = useState(false);
+    const [isModalVisible, setModalVisible] = useState(false)
 
 
     return (
@@ -26,11 +26,16 @@ function OptionsButton(props) {
                     onBackdropPress={()=>{setModalVisible(false)}}
                     swipeDirection="down"
 
-                    animationIn='pulse'
-                    animationInTiming={500}
+                    backdropColor='black'
 
-                    animationOut='fadeOut'
-                    animationOutTiming={500}
+
+                    backdropOpacity={0.2}
+
+                    animationIn= 'flipInX'
+                    animationInTiming={700}
+
+                    animationOut='flipOutX'
+                    animationOutTiming={700}
 
                     style={styles.modalStyle}
                     >
@@ -53,12 +58,10 @@ const styles = StyleSheet.create({
 
     modalStyle:{
         flex: 1,
-        justifyContent:'center',
-        alignItems:'center',
+        top:-50,
+        left:90
     },
 
-
-    
     options:{
         top:-10,
         left:360

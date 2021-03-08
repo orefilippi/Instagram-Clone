@@ -74,7 +74,10 @@ function Home(props) {
   
 
     return (
-        <View style={{flex:1, justifyContent:'center', alignItems:'center', paddingLeft:0, paddingRight:0, padding:50, backgroundColor: '#fdfff5' }}>
+        <View style={{flex:1, justifyContent:'center', 
+                      alignItems:'center', paddingLeft:0, 
+                      paddingRight:0, padding:50, 
+                      backgroundColor: '#fdfff5' }}>
             <StatusBar hidden />
             <Carousel 
 

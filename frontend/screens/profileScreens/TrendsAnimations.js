@@ -18,28 +18,28 @@ function TrendsAnimations(props) {
             
             Animated.timing(searchBar, {
                 toValue: 1,
-                duration:1500,
-                easing: Easing.bounce,
+                duration:1000,
+                easing: Easing.out(Easing.exp),
                 useNativeDriver: true
             }),
             
             Animated.timing(trendA, {
                 toValue: 1,
-                duration:1500,
-                easing: Easing.bounce,
+                duration:1000,
+                easing: Easing.out(Easing.exp),
                 useNativeDriver: true
             }),
             Animated.timing(trendC, {
                 toValue: 1,
-                duration:1500,
-                easing: Easing.bounce,
+                duration:1000,
+                easing: Easing.out(Easing.exp),
                 useNativeDriver: true
             }),
             
             Animated.timing(trendB, {
                 toValue: 1,
-                duration:1500,
-                easing: Easing.bounce,
+                duration:1000,
+                easing: Easing.out(Easing.exp),
                 useNativeDriver: true
             }),
             

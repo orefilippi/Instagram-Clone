@@ -6,7 +6,6 @@ import AddProfile from '../../screens/profileScreens/AddProfile'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import SelectCategory from '../../screens/trendScreens/SelectCategory'
-import { color } from 'react-native-reanimated';
 
 
 function AddCategory(props) {
@@ -18,6 +17,8 @@ function AddCategory(props) {
     };
 
     return (
+
+        
 
         <View>
 

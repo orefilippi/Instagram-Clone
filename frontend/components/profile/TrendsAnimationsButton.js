@@ -23,7 +23,6 @@ function TrendsAnimationsButton(props) {
             </TouchableOpacity>
 
 
-
             <Modal  isVisible={isModalVisible}
                     onSwipeComplete={()=>{setModalVisible(false)}}
                     onBackdropPress={()=>{setModalVisible(false)}}

@@ -17,11 +17,23 @@ function Options(props) {
 const styles = StyleSheet.create({
 
     container: {
-      width:350,
+      width:200,
       height:400,
-      padding: 5,
-      backgroundColor: "white",
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor: "#EBE8EB",
+      borderWidth:3,
       borderRadius: 10,
+      borderColor:'white',
+
+      shadowColor:'black',
+      shadowOpacity:0.4,
+      shadowOffset:{
+          height:5,
+          width:10
+      },
+
+      elevation:4,
     },
 
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, View, ScrollView} from 'react-native';
-
+import { StyleSheet, View, ScrollView, Animated, TouchableOpacity, Text} from 'react-native';
 
 import AddTrend from '../components/trends/AddTrend'
 import AddCategory from '../components/trends/AddCategory'
 import AddCountry from '../components/trends/AddCountry'
 
 import Photos from '../screens/profileScreens/Photos'
+
 
 
 function Trends(props) {
@@ -31,9 +31,10 @@ function Trends(props) {
         
     ];
 
+
     return (
 
-      <ScrollView>
+      <ScrollView style={{backgroundColor:'#fdfff5'}}>
 
         <View style={{top:20, left:150}}>
 
@@ -47,6 +48,7 @@ function Trends(props) {
         <View style={{top:-10}}>
             <Photos></Photos>
         </View>
+
 
       </ScrollView>
 

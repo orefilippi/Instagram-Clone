@@ -25,7 +25,7 @@ function Profile() {
 
     return (
         
-        <ScrollView>
+        <ScrollView style={{backgroundColor:'#fdfff5'}}>
 
             <View>
                 <AddProfileButton></AddProfileButton>
@@ -48,7 +48,7 @@ function Profile() {
                 <TrendsAnimationsButton></TrendsAnimationsButton>
             </View>
 
-            <View style={{height:800, top:200}}>
+            <View style={{height:800, top:160}}>
                 <Photos></Photos>
             </View>
 
