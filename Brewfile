@@ -1,5 +1,0 @@
-tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/core"
-brew "python@3.9"
-brew "watchman"
